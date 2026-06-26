@@ -7,6 +7,7 @@ import { Menu, X, Globe2 } from "lucide-react";
 import { useScrolled } from "@/hooks/useScrolled";
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const links = [
   { href: "/", label: "Home" },
@@ -29,16 +30,53 @@ export default function Navbar() {
       )}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-10">
-        <Link href="/" className="flex items-center gap-2 group">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-primary to-gold/40 border border-white/10">
-            <Globe2 className="h-4.5 w-4.5 text-gold" strokeWidth={1.75} />
-          </span>
-          <span className="font-display text-lg text-offwhite tracking-wide">
-            Global Vista <span className="text-gold">Educators</span>
-          </span>
-        </Link>
+      
 
-        <div className="hidden items-center gap-10 lg:flex">
+<Link href="/" className="flex items-center gap-4 group">
+  {/* Logo Container */}
+  <div
+    className="
+      relative
+      h-16 w-16
+      lg:h-20 lg:w-20
+      overflow-hidden
+      rounded-full
+      border border-[#D89B1D]/40
+      bg-gradient-to-br
+      from-[#0A1330]
+      to-[#111C48]
+      shadow-[0_0_20px_rgba(216,155,29,0.25)]
+      transition-all
+      duration-300
+      group-hover:scale-105
+      group-hover:shadow-[0_0_35px_rgba(216,155,29,0.45)]
+    "
+  >
+    <Image
+      src="/images/logo.png"
+      alt="Global Vista Educators Logo"
+      fill
+      priority
+      className="object-contain p-0"
+    />
+  </div>
+
+  {/* Text */}
+  <div className="flex flex-col leading-none">
+    <span className="font-display text-2xl font-semibold text-white tracking-wide">
+      Global Vista
+    </span>
+
+    <span className="mt-1 text-sm lg:text-base font-medium tracking-[0.35em] uppercase text-[#D89B1D]">
+      EDUCATORS
+    </span>
+
+    <span className="mt-2 hidden xl:block text-[10px] tracking-[0.4em] uppercase text-white/70">
+      EXPLORE • EDUCATE • EMPOWER
+    </span>
+  </div>
+</Link>
+        <div className="hidden items-center gap-8 xl:gap-10 lg:flex">
           {links.map((link) => (
             <Link
               key={link.href}

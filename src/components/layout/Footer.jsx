@@ -1,103 +1,105 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Globe2 } from "lucide-react";
-import { useScrolled } from "@/hooks/useScrolled";
-import Button from "@/components/ui/Button";
-import { cn } from "@/lib/utils";
+import {
+  Globe2,
+  Mail,
+  Phone,
+  Send,
+  MessageCircle,
+  Github,
+} from "lucide-react";
 
-const links = [
+const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/contact", label: "Contact" },
 ];
 
-export default function Navbar() {
-  const scrolled = useScrolled(24);
-  const [open, setOpen] = useState(false);
+const services = [
+  "STEM Support",
+  "Exam Preparation",
+  "Mentorship",
+  "Career Guidance",
+  "Flexible Learning",
+];
 
+export default function Footer() {
   return (
-    <header
-      className={cn(
-        "fixed top-0 z-50 w-full transition-all duration-500",
-        scrolled
-          ? "border-b border-white/10 bg-navy/70 backdrop-blur-xl py-3"
-          : "bg-transparent py-5"
-      )}
-    >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-10">
-        <Link href="/" className="flex items-center gap-2 group">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-primary to-gold/40 border border-white/10">
-            <Globe2 className="h-4.5 w-4.5 text-gold" strokeWidth={1.75} />
-          </span>
-          <span className="font-display text-lg text-offwhite tracking-wide">
-            Global Vista <span className="text-gold">Educators</span>
-          </span>
-        </Link>
-
-        <div className="hidden items-center gap-10 lg:flex">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="relative text-sm text-muted transition-colors hover:text-offwhite after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
-        <div className="hidden lg:block">
-          <Button as="a" href="/contact" variant="primary" className="text-xs">
-            Book Consultation
-          </Button>
-        </div>
-
-        <button
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-offwhite lg:hidden"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
-      </nav>
-
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-white/10 bg-navy/95 backdrop-blur-xl lg:hidden"
-          >
-            <div className="flex flex-col gap-1 px-6 py-6">
-              {links.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-3 text-base text-muted transition-colors hover:bg-white/5 hover:text-offwhite"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Button
-                as="a"
-                href="/contact"
-                variant="primary"
-                className="mt-3 w-full"
-                onClick={() => setOpen(false)}
-              >
-                Book Consultation
-              </Button>
+    <footer className="relative mt-24 border-t border-white/10">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
+          <div className="grid gap-12 lg:grid-cols-4">
+            <div className="lg:col-span-2">
+              <Link href="/" className="flex items-center gap-2">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-primary to-gold/40 border border-white/10">
+                  <Globe2 className="h-4.5 w-4.5 text-gold" strokeWidth={1.75} />
+                </span>
+                <span className="font-display text-lg text-offwhite">
+                  Global Vista <span className="text-gold">Educators</span>
+                </span>
+              </Link>
+              <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
+                Connecting Indian students with UK educators for mentorship,
+                exam preparation and global academic opportunity.
+              </p>
+              <p className="mt-4 text-xs uppercase tracking-[0.25em] text-gold">
+                Explore • Educate • Empower
+              </p>
+              <div className="mt-6 flex items-center gap-3">
+              {[Mail, Send, MessageCircle].map((Icon, i) => (
+                  <a
+                    key={i}
+                    href="#"
+                    aria-label="Social link"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-muted transition-all hover:border-gold/40 hover:text-gold"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+
+            <div>
+              <h4 className="font-display text-base text-offwhite">Quick Links</h4>
+              <ul className="mt-4 space-y-3">
+                {quickLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-muted transition-colors hover:text-gold"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-display text-base text-offwhite">Services</h4>
+              <ul className="mt-4 space-y-3">
+                {services.map((service) => (
+                  <li key={service} className="text-sm text-muted">
+                    {service}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 flex items-center gap-2 text-sm text-muted">
+                <Phone className="h-4 w-4 text-gold" />
+                +91 98765 43210
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-muted sm:flex-row">
+            <p>© {new Date().getFullYear()} Global Vista Educators. All rights reserved.</p>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-gold">Privacy Policy</a>
+              <a href="#" className="hover:text-gold">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }
