@@ -22,7 +22,7 @@ export default function HeroSection() {
             {...fadeUp(0.12)}
             className="mt-7 font-display text-4xl leading-[1.1] text-offwhite sm:text-5xl lg:text-6xl"
           >
-            Connecting Indian Students
+            Connecting  Students
             <br />
             with <span className="text-gold">UK Educators</span>
           </motion.h1>

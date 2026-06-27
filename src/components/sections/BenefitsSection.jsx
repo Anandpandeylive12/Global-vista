@@ -1,17 +1,63 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, Users, LineChart, ShieldCheck } from "lucide-react";
+import {
+  Award,
+  GraduationCap,
+  UserCheck,
+  Briefcase,
+  Rocket,
+  Globe2,
+  HeartHandshake,
+} from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import GlassCard from "@/components/ui/GlassCard";
 import { fadeUp } from "@/animations/fadeUp";
 import { staggerContainer, staggerItem } from "@/animations/staggerContainer";
 
 const benefits = [
-  { icon: Clock, title: "Flexible Scheduling", description: "Sessions fit around school, not the other way around." },
-  { icon: Users, title: "Small Group Focus", description: "Low student-to-mentor ratios for real attention." },
-  { icon: LineChart, title: "Tracked Progress", description: "Regular reports show exactly where a student stands." },
-  { icon: ShieldCheck, title: "Vetted Educators", description: "Every mentor is screened for subject depth and teaching skill." },
+  {
+    icon: Award,
+    title: "Academic Excellence",
+    description:
+      "Delivering world-class academic standards inspired by leading international education systems.",
+  },
+  {
+    icon: GraduationCap,
+    title: "International University Expertise",
+    description:
+      "Guidance and support from educators and mentors with global academic experience.",
+  },
+  {
+    icon: UserCheck,
+    title: "Personalised Mentoring",
+    description:
+      "Individual attention and tailored learning pathways designed for every student.",
+  },
+  {
+    icon: Briefcase,
+    title: "Career-Focused Guidance",
+    description:
+      "Helping students align their education with future careers and opportunities.",
+  },
+  {
+    icon: Rocket,
+    title: "Future Skills Development",
+    description:
+      "Building leadership, critical thinking, communication, and problem-solving skills.",
+  },
+  {
+    icon: Globe2,
+    title: "Global Exposure Opportunities",
+    description:
+      "Connecting students with international perspectives and educational pathways.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Student-Centred Approach",
+    description:
+      "Every decision and learning experience is designed around student success.",
+  },
 ];
 
 export default function BenefitsSection() {

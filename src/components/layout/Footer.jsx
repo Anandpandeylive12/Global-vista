@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Globe2,
   Mail,
@@ -30,14 +31,50 @@ export default function Footer() {
         <div className="rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
           <div className="grid gap-12 lg:grid-cols-4">
             <div className="lg:col-span-2">
-              <Link href="/" className="flex items-center gap-2">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-primary to-gold/40 border border-white/10">
-                  <Globe2 className="h-4.5 w-4.5 text-gold" strokeWidth={1.75} />
-                </span>
-                <span className="font-display text-lg text-offwhite">
-                  Global Vista <span className="text-gold">Educators</span>
-                </span>
-              </Link>
+             <Link href="/" className="flex items-center gap-4 group">
+  {/* Logo Container */}
+  <div
+    className="
+      relative
+      h-16 w-16
+      lg:h-20 lg:w-20
+      overflow-hidden
+      rounded-full
+      border border-[#D89B1D]/40
+      bg-gradient-to-br
+      from-[#0A1330]
+      to-[#111C48]
+      shadow-[0_0_20px_rgba(216,155,29,0.25)]
+      transition-all
+      duration-300
+      group-hover:scale-105
+      group-hover:shadow-[0_0_35px_rgba(216,155,29,0.45)]
+    "
+  >
+    <Image
+      src="/images/logo.png"
+      alt="Global Vista Educators Logo"
+      fill
+      priority
+      className="object-contain p-0"
+    />
+  </div>
+
+  {/* Text */}
+  <div className="flex flex-col leading-none">
+    <span className="font-display text-2xl font-semibold text-white tracking-wide">
+      Global Vista
+    </span>
+
+    <span className="mt-1 text-sm lg:text-base font-medium tracking-[0.35em] uppercase text-[#D89B1D]">
+      EDUCATORS
+    </span>
+
+    <span className="mt-2 hidden xl:block text-[10px] tracking-[0.4em] uppercase text-white/70">
+      EXPLORE • EDUCATE • EMPOWER
+    </span>
+  </div>
+</Link>
               <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
                 Connecting Indian students with UK educators for mentorship,
                 exam preparation and global academic opportunity.
@@ -86,7 +123,7 @@ export default function Footer() {
               </ul>
               <div className="mt-6 flex items-center gap-2 text-sm text-muted">
                 <Phone className="h-4 w-4 text-gold" />
-                +91 98765 43210
+                +91 998145 61099
               </div>
             </div>
           </div>

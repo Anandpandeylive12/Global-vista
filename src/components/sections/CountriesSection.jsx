@@ -20,12 +20,12 @@ export default function CountriesSection() {
         <div className="relative mt-16 grid grid-cols-1 items-center gap-10 lg:grid-cols-3">
           <motion.div {...slideInLeft(0.1)}>
             <GlassCard className="p-8 text-center">
-              <p className="text-xs uppercase tracking-[0.25em] text-gold">Origin</p>
+              {/* <p className="text-xs uppercase tracking-[0.25em] text-gold">Origin</p> */}
               <h3 className="mt-3 font-display text-2xl text-offwhite">India</h3>
-              <p className="mt-3 text-sm text-muted">
+              <h2 className="mt-3 text-sm text-muted">
                 Ambitious students across India, ready for world-class
                 academic mentorship.
-              </p>
+              </h2>
             </GlassCard>
           </motion.div>
 
@@ -55,12 +55,12 @@ export default function CountriesSection() {
 
           <motion.div {...slideInRight(0.1)}>
             <GlassCard className="p-8 text-center">
-              <p className="text-xs uppercase tracking-[0.25em] text-gold">Destination</p>
+              {/* <p className="text-xs uppercase tracking-[0.25em] text-gold">Destination</p> */}
               <h3 className="mt-3 font-display text-2xl text-offwhite">United Kingdom</h3>
-              <p className="mt-3 text-sm text-muted">
+              <h2 className="mt-3 text-sm text-muted">
                 Experienced UK educators delivering global academic
                 standards, live.
-              </p>
+              </h2>
             </GlassCard>
           </motion.div>
         </div>

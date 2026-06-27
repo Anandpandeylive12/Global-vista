@@ -16,17 +16,17 @@ const cards = [
   {
     icon: NotebookPen,
     title: "Exam Preparation",
-    items: ["10th", "11th", "12th"],
+    items: ["9th", "10th", "11th", "12th", "Olympiad & Competitive Exam"],
   },
   {
     icon: CalendarClock,
     title: "Flexible Learning",
-    items: ["Live Classes", "Recorded Sessions", "Resources"],
+    items: ["Live online Classes", "Recorded Sessions", "Learning Resources","Self-paced Learning"],
   },
   {
     icon: Compass,
     title: "Mentorship",
-    items: ["Leadership", "Communication", "Career Skills"],
+    items: ["Parent Engagement", "Career Counselling", "Skill Development","Mentoring & Coaching"],
   },
 ];
 
@@ -37,12 +37,9 @@ export default function WhyChooseUsSection() {
         <motion.div {...fadeUp(0)} className="max-w-2xl">
           <SectionLabel>Why Global Vista</SectionLabel>
           <h2 className="mt-4 font-display text-3xl text-offwhite sm:text-4xl">
-            Everything a student needs to learn with confidence
+            We bring the world’s finest education system to India, opening doors of opportunity for your child’s future.
           </h2>
-          <p className="mt-4 text-base text-muted">
-            From subject mastery to exam strategy, every part of the journey
-            is guided by UK educators who teach with structure and care.
-          </p>
+          
         </motion.div>
 
         <motion.div

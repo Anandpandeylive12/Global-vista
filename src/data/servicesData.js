@@ -11,7 +11,7 @@ export const servicesData = [
     title: "Exam Preparation",
     description:
       "Structured revision sprints mapped to board exams, with mock tests and targeted feedback on weak areas.",
-    items: ["10th", "11th", "12th"],
+    items: ["9th", "10th", "11th", "12th","Olympiad & Competitive Exam"],
   },
   {
     id: "flexible-learning",

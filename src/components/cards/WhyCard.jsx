@@ -8,7 +8,7 @@ export default function WhyCard({ icon: Icon, title, items }) {
   return (
     <motion.div variants={staggerItem}>
       <GlassCard className="h-full p-7">
-        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 border border-gold/20">
+        <div className="flex h-5 w-5 items-center justify-center rounded-xl bg-gold/10 border border-gold/20">
           <Icon className="h-5.5 w-5.5 text-gold" strokeWidth={1.75} />
         </div>
         <h3 className="mt-5 font-display text-xl text-offwhite">{title}</h3>

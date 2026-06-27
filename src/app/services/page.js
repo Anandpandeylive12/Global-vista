@@ -2,6 +2,7 @@ import ServicesHero from "@/components/sections/ServicesHero";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import BenefitsSection from "@/components/sections/BenefitsSection";
 import LearningProcess from "@/components/sections/LearningProcess";
+import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import CTASection from "@/components/sections/CTASection";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -19,6 +20,7 @@ export default function ServicesPage() {
       <ServicesGrid />
       <BenefitsSection />
       <LearningProcess />
+      <WhyChooseUsSection/>
       <CTASection />
     </>
   );
