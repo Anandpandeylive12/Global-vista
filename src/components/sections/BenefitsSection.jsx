@@ -64,10 +64,10 @@ export default function BenefitsSection() {
   return (
     <section className="relative px-6 py-20 lg:px-10">
       <div className="mx-auto max-w-7xl">
-        <motion.div {...fadeUp(0)} className="max-w-2xl">
-          <SectionLabel>Benefits</SectionLabel>
+        <motion.div {...fadeUp(0)} className="">
+          <SectionLabel>Why Global Vista</SectionLabel>
           <h2 className="mt-4 font-display text-3xl text-offwhite sm:text-4xl">
-            Why families choose Global Vista
+           More Than Education — A Partnership with Students and Parents for Lifelong Success.
           </h2>
         </motion.div>
 

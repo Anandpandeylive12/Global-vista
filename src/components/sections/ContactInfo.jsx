@@ -6,10 +6,10 @@ import GlassCard from "@/components/ui/GlassCard";
 import { slideInLeft } from "@/animations/slideIn";
 
 const details = [
-  { icon: Mail, label: "Email", value: "mybusinessaffairs01@gmail.com" },
+  { icon: Mail, label: "Email", value: "GlobalVistaEducators@gmail.com" },
   { icon: Phone, label: "Phone", value: "+91 98145 61099" },
-  { icon: MapPin, label: "Office", value: "Punjab, India & West Midlands, UK" },
-  { icon: Clock, label: "Hours", value: "Mon–Sat, 9:00 AM – 6:00 PM (GMT +5:30)" },
+  // { icon: MapPin, label: "Office", value: "Punjab, India & West Midlands, UK" },
+  // { icon: Clock, label: "Hours", value: "Mon–Sat, 9:00 AM – 6:00 PM (GMT +5:30)" },
 ];
 
 export default function ContactInfo() {

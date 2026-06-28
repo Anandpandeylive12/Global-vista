@@ -11,16 +11,15 @@ import {
 
 const quickLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "About Us " },
   { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 const services = [
-  "STEM Support",
+  "STEM Academic Support",
   "Exam Preparation",
-  "Mentorship",
-  "Career Guidance",
+  "Mentorship & Career Guidance",
   "Flexible Learning",
 ];
 
@@ -76,7 +75,7 @@ export default function Footer() {
   </div>
 </Link>
               <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-                Connecting Indian students with UK educators for mentorship,
+                Connecting  students with UK educators for mentorship,
                 exam preparation and global academic opportunity.
               </p>
               <p className="mt-4 text-xs uppercase tracking-[0.25em] text-gold">

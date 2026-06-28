@@ -23,7 +23,7 @@ function StatItem({ value, suffix, label }) {
 
 export default function StatsSection() {
   return (
-    <section className="relative px-6 py-24 lg:px-10">
+    <section className="relative px-4 py-24 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <motion.div
           {...staggerContainer(0.12)}

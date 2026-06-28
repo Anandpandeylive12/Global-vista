@@ -4,6 +4,7 @@ import CoreValues from "@/components/sections/CoreValues";
 import EducatorsGrid from "@/components/sections/EducatorsGrid";
 import CTASection from "@/components/sections/CTASection";
 import { buildMetadata } from "@/lib/metadata";
+import GlobalPartnershipSection from "@/components/sections/GlobalPartnershipSection";
 
 export const metadata = buildMetadata({
   title: "About Us",
@@ -18,6 +19,7 @@ export default function AboutPage() {
       <AboutHero />
       {/* <MissionVision /> */}
       <CoreValues />
+      <GlobalPartnershipSection/>
       {/* <EducatorsGrid />  */}
       <CTASection />
     </>

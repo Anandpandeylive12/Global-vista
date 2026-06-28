@@ -194,7 +194,7 @@ function PartnershipIllustration() {
 
 export default function GlobalPartnershipSection() {
   return (
-    <section className="relative overflow-hidden px-6 py-24 lg:px-10">
+    <section className="relative overflow-hidden px-6 py-14 lg:px-10">
       {/* Section-local atmospheric accents */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
         <div className="absolute left-1/4 top-0 h-72 w-72 rounded-full bg-[#001F6B]/20 blur-[130px]" />
@@ -205,60 +205,16 @@ export default function GlobalPartnershipSection() {
         <motion.div {...fadeUp(0)} className="mx-auto max-w-2xl text-center">
           <SectionLabel className="justify-center">Global Collaboration</SectionLabel>
           <h2 className="mt-4 font-display text-3xl text-offwhite sm:text-4xl lg:text-5xl">
-            Global Partnership with Kaizen BMS for India Operations
+             Partnership with KaizenBMS for Global Operations
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-muted">
-            Global Vista has partnered with Kaizen BMS to manage and support
-            operations across India, ensuring local expertise combined with
-            international educational excellence.
-          </p>
+        
         </motion.div>
-
-        <div className="mt-16 grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <PartnershipIllustration />
-
-          <motion.div
-            {...staggerContainer(0.12)}
-            className="grid grid-cols-1 gap-5 sm:grid-cols-2"
-          >
-            {partnershipCards.map((card) => (
-              <PartnershipCard key={card.title} {...card} />
-            ))}
-          </motion.div>
-        </div>
-
-        {/* Partnership badge */}
-       <a href="    https://kaizenbms.in/"> <motion.div {...fadeUp(0.1)} className="mt-14 flex justify-center">
-          <GlassCard
-            hover={false}
-            className="flex flex-col items-center gap-3 px-8 py-6 text-center sm:flex-row sm:gap-5 sm:text-left"
-          >
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-gold/10">
-              <ShieldCheck className="h-5.5 w-5.5 text-gold" strokeWidth={1.75} />
-            </span>
-            <div>
-              <p className="font-display text-lg text-offwhite">
-                Official India Operations Partner
-              </p>
-              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-gold">
-                Powered by Global Vista × Kaizen BMS
-              </p>
-            </div>
-          </GlassCard>
-        </motion.div></a>
-
         {/* CTAs */}
         <motion.div
           {...fadeUp(0.2)}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <Button as="a" href="/about" variant="primary">
-            Learn More About Partnership
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-          <Button as="a" href="/contact" variant="outline">
-            Contact Our Team
-          </Button>
+         
         </motion.div>
       </div>
     </section>

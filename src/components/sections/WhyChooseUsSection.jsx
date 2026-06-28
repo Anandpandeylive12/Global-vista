@@ -36,7 +36,7 @@ export default function WhyChooseUsSection() {
       <div className="mx-auto max-w-7xl">
         <motion.div {...fadeUp(0)} className="max-w-2xl">
           <SectionLabel>Why Global Vista</SectionLabel>
-          <h2 className="mt-4 font-display text-3xl text-offwhite sm:text-4xl">
+          <h2 className="flex mt-4 font-display text-2xl text-offwhite sm:text-4xl">
             More Than Education — A Partnership with Students and Parents for Lifelong Success.
           </h2>
           

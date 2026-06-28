@@ -5,6 +5,7 @@ import LearningProcess from "@/components/sections/LearningProcess";
 import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import CTASection from "@/components/sections/CTASection";
 import { buildMetadata } from "@/lib/metadata";
+// import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 
 export const metadata = buildMetadata({
   title: "Services",
@@ -17,10 +18,10 @@ export default function ServicesPage() {
   return (
     <>
       <ServicesHero />
-      <ServicesGrid />
-      <BenefitsSection />
+      {/* <ServicesGrid /> */}
+     
       <LearningProcess />
-      <WhyChooseUsSection/>
+      
       <CTASection />
     </>
   );

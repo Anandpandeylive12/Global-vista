@@ -7,24 +7,24 @@ import EducatorsSection from "@/components/sections/EducatorsSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import CTASection from "@/components/sections/CTASection";
-import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
+
 import BenefitsSection from "@/components/sections/BenefitsSection";
 import PartnershipCard from "@/components/cards/PartnershipCard";
-import GlobalPartnershipSection from "@/components/sections/GlobalPartnershipSection";
+
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
       <MarqueeSection />
-      <WhyChooseUsSection/>
+      {/* <StatsSection /> */}
       <BenefitsSection/>
-      <CountriesSection />
-    <GlobalPartnershipSection/>
-      <StatsSection />
+      {/* <CountriesSection /> */}
+    
+     
       {/* <EducatorsSection /> */}
-      <TestimonialsSection />
-      <FAQSection />
+      {/* <TestimonialsSection /> */}
+      {/* <FAQSection /> */}
       <CTASection />
     </>
   );
