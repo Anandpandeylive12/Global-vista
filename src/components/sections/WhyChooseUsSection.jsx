@@ -37,7 +37,7 @@ export default function WhyChooseUsSection() {
         <motion.div {...fadeUp(0)} className="max-w-2xl">
           <SectionLabel>Why Global Vista</SectionLabel>
           <h2 className="mt-4 font-display text-3xl text-offwhite sm:text-4xl">
-            We bring the world’s finest education system to India, opening doors of opportunity for your child’s future.
+            More Than Education — A Partnership with Students and Parents for Lifelong Success.
           </h2>
           
         </motion.div>
